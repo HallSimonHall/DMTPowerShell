@@ -1,0 +1,24 @@
+OutFile,SQL,DMTTemplate,Enabled,Type,Options
+03_Customers_DMT_SP,EXEC [03_Customers_DMT_SP] 'Pilot',Customer,N,G,-NoUi -Add -Update
+04_CustAltBillTo_DMT_VW,SELECT * FROM [04_CustAltBillTo_DMT_VW],Customer AltBillTo,N,G,-NoUi -Add -Update
+05_NatAccountRelation_DMT_VW,SELECT * FROM [05_NatAccountRelation_DMT_VW],National Account Relation,N,G,-NoUi -Add -Update
+06_ShipTo_DMT_VW,SELECT * FROM [06_ShipTo_DMT_VW],Customer ShipTo,N,G,-NoUi -Add -Update
+07_Supplier_DMT_SP,EXEC [07_Supplier_DMT_SP] ,Supplier Combined,N,G,-NoUi -Add -Update
+08_PartsBySkuUOM_Pilot_VW,SELECT * FROM  [08_PartsBySkuUOM_PIlot_VW] ORDER BY partnum,Part Combined,N,G,-NoUi -Add -Update
+11_PartUOMConv_TEST_SKUByLength_VW,SELECT * FROM [11_PartUOMConv_SKUByLength_VW] ORDER BY PartNum,PartUOM,N,G,-NoUi -Add -Update
+12_AdditionalBins_VW,SELECT * FROM [12_AdditionalBins_VW],Warehouse Bin,N,G,-NoUi -Add -Update
+13_Part_Lot_DMT_SBL_VW,SELECT * FROM [13_Part_Lot_DMT_SBL_VW],Part Lot,N,G,-NoUi -Add -Update
+14_Build_Cost_Adjustments_DMT_SBL_SP,EXEC [14_Build_Cost_Adjustments_DMT_SBL_SP],Cost Adjustment,N,G,-NoUi -Add -Update
+15_Build_Qty_Adjustments,EXEC [15_Build_Qty_Adjustments_DMT_SKUByLength_SP],Quantity Adjustment,N,G,-NoUi -Add -Update
+15_Build_Qty_Adjustments,EXEC [15_Build_Qty_Adjustments_DMT_SP],Quantity Adjustment,N,G,-NoUi -Add -Update
+18_AR_OPEN_BAL_INV_DMT_SP,EXEC [18_AR_OPEN_BAL_INV_CM_DMT_SP] 'inv',AR Open Load,N,G,-NoUi -Add -Update
+18a_AR_OPEN_BAL_CM_DMT_SP,EXEC [18_AR_OPEN_BAL_INV_CM_DMT_SP] 'CM',AR Open Load,N,G,-NoUi -Add -Update
+19_AP_OPENINV_DMT_SP,EXEC [19_AP_OPENINV_DMT_SP],AP Open Load,N,G,-NoUi -Add -Update
+20_SaleOrderCombinedforRMAs_DMT_SBL_SP,Exec [20_SaleOrderCombinedforRMAs_DMT_SBL_SP],Sales Order Combined,N,G,-NoUi -Add -Update
+21_OpenRMAs_DMT_SP,Exec [21_OpenRMAs_DMT_SP],RMA Combined,N,G,-NoUi -Add -Update
+22_SalesOrderCombined_DMT_Direct_SBL SP,Exec [22_SalesOrderCombined_DMT_Direct_SBL SP],Sales Order Combined,N,G,-NoUi -Add -Update
+22_SalesOrderCombined_DMT_stixlive_SBL_SP,Exec [22_SalesOrderCombined_DMT_stixlive_SBL_SP],Sales Order Combined,N,G,-NoUi -Add -Update
+25_BUYER_DMT_VW,SELECT * FROM [25_BUYER_DMT_VW],Buyer,N,G,-NoUi -Add -Update
+26_BUYER_AuthUser_VW,SELECT * FROM 26_BUYER_AuthUser_VW,Buyer Authorized User,N,G,-NoUi -Add -Update
+92_CustDocs_DMT_VW,SELECT * FROM [92_CustDocs_DMT_VW],Customer Documents,N,G,-NoUi -Add -Update
+PartMasterPrices_VW,SELECT * FROM PartMasterPrices_VW,Part,N,G, -Update
