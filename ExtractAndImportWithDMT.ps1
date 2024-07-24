@@ -31,7 +31,7 @@
 
 #SQL Server info
 $SQLServer = "ttasesql02\test"
-$DBName = "DMTOut"
+$DBName = "DMTOut" #This is the db where you would store all of your stored procedures, views etc used for extraction
 
 #Location of the DMT 
 $DMTPath = "C:\Epicor\ERP10.2Client\102400-Demo\Client\DMT.exe"
@@ -41,8 +41,8 @@ $runpath = "C:\Temp\DMTTesting\DMTSystemCopy\"
 
 $imports = Import-Csv -Path C:\Temp\DMTTesting\DMTSystemCopy\DMTSystemCopyTest.csv
 
-$User = "Epicor"
-$Pass = "epicor"
+$User = "XXXX" #use your own credentials suggest using SSO
+$Pass = "XXXXr" #use your own credentials suggst using SSO
 
 ForEach ($item in $imports) {
     if ($item.Enabled -ne "N" ) { 
