@@ -25,3 +25,7 @@ As expected due to the specific nature of each environment the list of tables to
 
 ### Warranty
 This is provided with no warranty.
+
+### Resources
+https://www.epiusers.help/t/dmt-powershell-help/42438/6
+https://devblogs.microsoft.com/scripting/weekend-scripter-understanding-quotation-marks-in-powershell/
