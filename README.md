@@ -1,7 +1,7 @@
 # Powershell Script for Epicor ERP
 First created for 10.2.600
 
-Based on the Epicor DMT powershell script examples.
+Based on the Epicor DMT powershell script examples and EpiUsers (see references)
 
 ## Description
 Used to run all imports of data into a particular Epicor environment from scratch.  
